@@ -32,4 +32,16 @@ public class User {
                 ", age=" + user.getAge() +
                 '}';
     }
+
+    private static User user;
+    User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public static User getUser() {
+        if (user == null) {
+            user = new User("unknown",0);
+        }
+        return user;
+    }
 }

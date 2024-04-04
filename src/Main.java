@@ -4,13 +4,13 @@
 //Del primo si stamperanno le informazioni di default, del secondo si cambieranno le informazioni e poi si stamperanno a video
 public class Main {
     public static void main(String[] args) {
-        User user = new User();
-        System.out.println(User.stampUserInfo(user));
 
-        User user1 = new User();
-        user1.setAge(30);
+        User user = User.getUser();
+        System.out.println("user" + user);
+
+        User user1 = User.getUser();
         user1.setName("Gigi");
-        System.out.println(User.stampUserInfo(user1));
-
+        user1.setAge(30);
+        System.out.println("user1" + user1);
     }
 }
